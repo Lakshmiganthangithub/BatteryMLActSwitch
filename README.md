@@ -75,6 +75,14 @@ For models sensitive to initialization, we present the error mean across ten see
   
 
 
+## Switchable Activation for Improved RUL Prediction
+
+To improve the robustness of the LSTM-based battery lifetime prediction model, I introduced a switchable activation function that dynamically blends ReLU and Tanh activations during training. This design allows the model to adapt its nonlinear response according to the underlying degradation patterns, instead of relying on a single fixed activation function.
+
+Compared with a standard fixed-activation baseline, the switchable activation function improved prediction accuracy substantially. On the MATR benchmark, the RMSE decreased from 259 to 249, corresponding to an improvement of approximately 3.9%.
+
+This mechanism is beneficial for battery RUL forecasting because it helps the model capture both sharp nonlinear transitions and smooth degradation trends, resulting in better feature extraction and lower prediction error.
+
 ## Quick Start
 
 ### Install

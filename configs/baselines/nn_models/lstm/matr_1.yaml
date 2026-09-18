@@ -17,6 +17,9 @@ feature:
     use_precalculated_qdlin: True
 label:
     name: 'RULLabelAnnotator'
+#Because of newly added switchable activation function
+feature_transformation:
+    name: 'ZScoreDataTransformation'
 label_transformation:
     name: 'SequentialDataTransformation'
     transformations:
