@@ -8,6 +8,12 @@ Official code and data repository of BatteryML: An Open-Source Tool for Machine 
 
 Our paper is now available on [Arxiv](https://arxiv.org/abs/2310.14714) and [ICLR 2024](https://iclr.cc/virtual/2024/poster/17628)!  This paper provides detailed introduction to our design, which we will be actively updating during the development of BatteryML.
 
+## Attribution and Fork Source
+
+This project is based on the original BatteryML repository developed by Microsoft: [BatteryML](https://github.com/microsoft/BatteryML). The original project provides the base framework, preprocessing pipeline, datasets, and benchmarking tools.
+
+This fork keeps the original work intact and adds a custom modification: a switchable activation function in the LSTM model to improve battery RUL prediction. The main implementation change is the adaptive blend between ReLU and Tanh activations, which helped reduce RMSE from 259 to 249 on the MATR benchmark.
+
 ## Introduction
 
 The performance degradation of lithium batteries is a complex electrochemical process, involving factors such as the growth of solid electrolyte interface, lithium precipitation, loss of active materials, etc. Furthermore, this inevitable performance degradation can have a significant impact on critical commercial scenarios, such as causing 'range anxiety' for electric vehicle users and affecting the power stability of energy storage systems. Therefore, effectively analyzing and predicting the performance degradation of lithium batteries to provide guidance for early prevention and intervention has become a crucial research topic.
